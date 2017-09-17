@@ -1,0 +1,98 @@
+
+1.2.4
+-----
+
++ Added timestamp to integration return status message.
+
+
+1.2.3
+-----
+
++ Added support for RF power monitoring to GBT power supply hardware type.
+
+
+1.2.2
+-----
+
++ Added support for Casimir power supply hardware type.
+
+
+1.2.1
+-----
+
+! Fixed behavior of stats and scope commands when given invalid arguments.
+
+
+1.2
+---
+
++ Added support for auto-repeating observations (dobs, totpwr, zero).
+
+
+1.1.2
+-----
+
++ Added support for power supply hardware type.
+
+
+1.1.1
+-----
+
++ Added support for RLT WASP backend.
++ Added support for backend hardware variants (new flash memory parameter).
++ Added support for multiple (';'-separated) commands per line.
+! Fixed command loss when multiple commands are buffered into one TCP packet.
+
+
+1.1
+---
+
+? Sample variance increases during heavy TCP service activity.
+
++ Added infallible meanvar processing with overflow indicator.
++ Added monitoring auto-repeat to query command and MonitorService.
++ Added extreme-range test pattern operating mode.
++ Added uptime to staus display.
++ Added support for arbitrary help summary size.
+! Fixed output buffer overflow for meanvar, scope, and send commands.
+! Fixed ill-understood monitoring-related corruption of ADC interrupt handling
+  by adding separate periph_lock().
+
+
+1.0
+---
+* First official release.
+
+
+1.0beta3
+--------
+
+* Added reboot comand.
+* Improved sync command.
+* 64-bit mean and variance calculation in StatsObservation::computeStats().
+
+
+1.0beta2
+--------
+
+* Attenuator control fixes.
+
+
+1.0beta1
+--------
+
+* Lag data buffers have independent frame counts and times.
+
+
+0.9.1
+-----
+
+* Tweaked level auto-set algorithm.
+* Tweaked ADC setup (disable CPLD oscillator to avoid interference).
+
+
+0.9
+---
+
+* Fully functional lag statistics and oscilloscope observations.
+* Fully functional correlator ADC, monitor ADC, and attenuator control.
